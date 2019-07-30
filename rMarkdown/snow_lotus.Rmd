@@ -1,0 +1,184 @@
+---
+title: "天山雪蓮 老化基因分析"
+author: "Jade.Hou"
+date: "2017年8月8日"
+output: html_document
+---
+
+
+***
+
+> Set working dictionary and read file
+```{r}
+# set working dictionary
+setwd("c:/Users/Jade.Hou/Desktop/microarray")
+
+library(varhandle)
+
+#read snow_lotus data
+snow_lotus = read.csv("C:/Users/Jade.Hou/Desktop/microarray/R1_data/snow_lotus.csv", header = T)
+
+```
+
+
+***
+
+> PINK1 Expression
+```{r, fig.width = 6, fig.height = 6}
+#PINK1 log2 ratio
+sl_24hr <- unfactor(snow_lotus[12979, 6])
+sl_6hr <- unfactor(snow_lotus[12979, 7])
+sl_3hr <- unfactor(snow_lotus[12979, 8])
+
+
+pink1 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(pink1, xlab = "Dose", ylab = "log2 Expression Ratio", main = "PINK1", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+***
+
+> CCT2(1) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT2 log2 ratio
+sl_24hr <- unfactor(snow_lotus[10573, 6])
+sl_6hr <- unfactor(snow_lotus[10573, 7])
+sl_3hr <- unfactor(snow_lotus[10573, 8])
+
+
+CCT2 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT2, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT2", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+***
+
+> CCT2(2) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT2 log2 ratio
+sl_24hr <- unfactor(snow_lotus[20987, 6])
+sl_6hr <- unfactor(snow_lotus[20987, 7])
+sl_3hr <- unfactor(snow_lotus[20987, 8])
+
+
+CCT2 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT2, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT2", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+***
+
+> CCT5(1) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT5 log2 ratio
+sl_24hr <- unfactor(snow_lotus[190, 6])
+sl_6hr <- unfactor(snow_lotus[190, 7])
+sl_3hr <- unfactor(snow_lotus[190, 8])
+
+
+CCT5 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT5, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT5", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+***
+
+> CCT5(2) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT5 log2 ratio
+sl_24hr <- unfactor(snow_lotus[22700, 6])
+sl_6hr <- unfactor(snow_lotus[22700, 7])
+sl_3hr <- unfactor(snow_lotus[22700, 8])
+
+
+CCT5 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT5, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT5", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+***
+
+> CCT6A Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT6A log2 ratio
+sl_24hr <- unfactor(snow_lotus[3209, 6])
+sl_6hr <- unfactor(snow_lotus[3209, 7])
+sl_3hr <- unfactor(snow_lotus[3209, 8])
+
+
+CCT6A = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT6A, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT6A", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+
+```
+
+
+> CCT7(1) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT7 log2 ratio
+sl_24hr <- unfactor(snow_lotus[11545, 6])
+sl_6hr <- unfactor(snow_lotus[11545, 7])
+sl_3hr <- unfactor(snow_lotus[11545, 8])
+
+
+CCT7 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT7, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT7", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+```
+
+
+> CCT7(2) Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT7 log2 ratio
+sl_24hr <- unfactor(snow_lotus[17579, 6])
+sl_6hr <- unfactor(snow_lotus[17579, 7])
+sl_3hr <- unfactor(snow_lotus[17579, 8])
+
+
+CCT7 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT7, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT7", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+```
+
+
+
+> CCT8 Expression
+```{r, fig.width = 6, fig.height = 6}
+#CCT8 log2 ratio
+sl_24hr <- unfactor(snow_lotus[17864, 6])
+sl_6hr <- unfactor(snow_lotus[17864, 7])
+sl_3hr <- unfactor(snow_lotus[17864, 8])
+
+
+CCT8 = c(sl_3hr, sl_6hr, sl_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT8, xlab = "Dose", ylab = "log2 Expression Ratio", main = "CCT8", names.arg = c("3hr", "6hr", "24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue"))
+```

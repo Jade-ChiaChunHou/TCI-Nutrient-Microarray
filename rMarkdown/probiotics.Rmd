@@ -1,0 +1,209 @@
+---
+title: "母乳益生菌 老化基因分析"
+author: "Jade.Hou"
+date: "2017年8月7日"
+output: html_document
+---
+
+***
+
+> Set working dictionary and read file
+```{r}
+# set working dictionary
+setwd("c:/Users/Jade.Hou/Desktop/microarray")
+
+library(varhandle)
+
+#read probiotics data
+
+probiotics = read.csv("C:/Users/Jade.Hou/Desktop/microarray/R1_data/probiotics.csv", header = T)
+
+```
+
+***
+
+> PINK1 Expression
+```{r, fig.width = 10, fig.height = 6}
+#PINK1 log2 ratio
+tci633_24hr <- unfactor(probiotics[11748, 12])
+tci633_6hr <- unfactor(probiotics[11748, 13])
+tci633_3hr <- unfactor(probiotics[11748, 14])
+
+mix_24hr <- unfactor(probiotics[11748, 15])
+mix_6hr <- unfactor(probiotics[11748, 16])
+mix_3hr <- unfactor(probiotics[11748, 17])
+
+tci068_24hr <- unfactor(probiotics[11748, 18])
+
+pink1 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(pink1, xlab = "Dose", ylab = "log2 Expression", main = "PINK1", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+
+```
+
+***
+
+> CCT2 Expression
+```{r, fig.width = 10, fig.height = 6}
+#CCT2 log2 ratio
+tci633_24hr <- unfactor(probiotics[9486, 12])
+tci633_6hr <- unfactor(probiotics[9486, 13])
+tci633_3hr <- unfactor(probiotics[9486, 14])
+
+mix_24hr <- unfactor(probiotics[9486, 15])
+mix_6hr <- unfactor(probiotics[9486, 16])
+mix_3hr <- unfactor(probiotics[9486, 17])
+
+tci068_24hr <- unfactor(probiotics[9486, 18])
+
+CCT2 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT2, xlab = "Dose", ylab = "log2 Expression", main = "CCT2", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+
+```
+
+***
+
+> CCT5(1) Expression
+
+```{r, fig.width = 10, fig.height = 6}
+#CCT5 log2 ratio
+tci633_24hr <- unfactor(probiotics[181, 12])
+tci633_6hr <- unfactor(probiotics[181, 13])
+tci633_3hr <- unfactor(probiotics[181, 14])
+
+mix_24hr <- unfactor(probiotics[181, 15])
+mix_6hr <- unfactor(probiotics[181, 16])
+mix_3hr <- unfactor(probiotics[181, 17])
+
+tci068_24hr <- unfactor(probiotics[181, 18])
+
+CCT5 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT5, xlab = "Dose", ylab = "log2 Expression", main = "CCT5", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+
+***
+> CCT5(2) Expression
+
+```{r, fig.width = 10, fig.height = 6}
+#CCT5 log2 ratio
+tci633_24hr <- unfactor(probiotics[19967, 12])
+tci633_6hr <- unfactor(probiotics[19967, 13])
+tci633_3hr <- unfactor(probiotics[19967, 14])
+
+mix_24hr <- unfactor(probiotics[19967, 15])
+mix_6hr <- unfactor(probiotics[19967, 16])
+mix_3hr <- unfactor(probiotics[19967, 17])
+
+tci068_24hr <- unfactor(probiotics[19967, 18])
+
+CCT5 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT5, xlab = "Dose", ylab = "log2 Expression", main = "CCT5", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+
+***
+> CCT6A Expression
+
+```{r, fig.width = 10, fig.height = 6}
+#CCT6A log2 ratio
+tci633_24hr <- unfactor(probiotics[3005, 12])
+tci633_6hr <- unfactor(probiotics[3005, 13])
+tci633_3hr <- unfactor(probiotics[3005, 14])
+
+mix_24hr <- unfactor(probiotics[3005, 15])
+mix_6hr <- unfactor(probiotics[3005, 16])
+mix_3hr <- unfactor(probiotics[3005, 17])
+
+tci068_24hr <- unfactor(probiotics[3005, 18])
+
+CCT6A = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT6A, xlab = "Dose", ylab = "log2 Expression", main = "CCT6A", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+***
+> CCT7(1) Expression
+
+```{r, fig.width = 10, fig.height = 6}
+#CCT7 log2 ratio
+tci633_24hr <- unfactor(probiotics[10398, 12])
+tci633_6hr <- unfactor(probiotics[10398, 13])
+tci633_3hr <- unfactor(probiotics[10398, 14])
+
+mix_24hr <- unfactor(probiotics[10398, 15])
+mix_6hr <- unfactor(probiotics[10398, 16])
+mix_3hr <- unfactor(probiotics[10398, 17])
+
+tci068_24hr <- unfactor(probiotics[10398, 18])
+
+CCT7 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT7, xlab = "Dose", ylab = "log2 Expression", main = "CCT7", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+
+***
+> CCT7(2) Expression
+
+```{r, fig.width = 10, fig.height = 6}
+#CCT7 log2 ratio
+tci633_24hr <- unfactor(probiotics[15753, 12])
+tci633_6hr <- unfactor(probiotics[15753, 13])
+tci633_3hr <- unfactor(probiotics[15753, 14])
+
+mix_24hr <- unfactor(probiotics[15753, 15])
+mix_6hr <- unfactor(probiotics[15753, 16])
+mix_3hr <- unfactor(probiotics[15753, 17])
+
+tci068_24hr <- unfactor(probiotics[15753, 18])
+
+CCT7 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT7, xlab = "Dose", ylab = "log2 Expression", main = "CCT7", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+
+***
+> CCT8 Expression
+```{r, fig.width = 10, fig.height = 6}
+#CCT8 log2 ratio
+tci633_24hr <- unfactor(probiotics[15996, 12])
+tci633_6hr <- unfactor(probiotics[15996, 13])
+tci633_3hr <- unfactor(probiotics[15996, 14])
+
+mix_24hr <- unfactor(probiotics[15996, 15])
+mix_6hr <- unfactor(probiotics[15996, 16])
+mix_3hr <- unfactor(probiotics[15996, 17])
+
+tci068_24hr <- unfactor(probiotics[15996, 18])
+
+CCT8 = c(tci633_3hr, tci633_6hr, tci633_24hr, mix_3hr, mix_6hr, mix_24hr, tci068_24hr)
+
+#barplot catlog vs log2 ratio
+
+barplot(CCT8, xlab = "Dose", ylab = "log2 Expression", main = "CCT8", names.arg = c("tci633_3hr", "tci633_6hr", "tci633_24hr", "mix_3hr", "mix_6hr", "mix_24hr", "tci068_24hr"), col = c("lightblue1", "lightskyblue", "deepskyblue", "darkseagreen1", "darkseagreen2", "darkseagreen3", "gray") )
+```
+
+
+
+```{r, echo=FALSE}
+
+```
